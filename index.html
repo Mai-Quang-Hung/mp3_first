@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music player</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+    integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+    crossorigin="anonymous" />
+  <!-- icon -->
+  <link rel="icon" href="https://hentaiz.cc/wp-content/themes/ztube/assets/images/icon.png" type="image/png">
+ 
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/css/main.css">
+</head>
+
+<body>
+  <div class="player">
+    <!-- Dashboard -->
+    <div class="dashboard">
+      <!-- Header -->
+      <header>
+
+        <div class="volume">
+          <div class="btn btn-voldown">
+            <i class="fas fa-volume-down"></i>
+          </div>
+
+          <h4>Now playing:</h4>
+
+          <div class="btn btn-volup">
+            <i class="fas fa-volume-up"></i>
+          </div>
+
+        </div>
+        <marquee behavior="Scroll">
+          <h2>YOU ARE ANGLES</h2>
+        </marquee>
+
+      </header>
+
+      <!-- CD -->
+      <div class="cd">
+        <div class="cd-thumb " style="background-image: url('https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg')">
+        </div>
+      </div>
+
+      <!-- Control -->
+      <div class="control">
+        <div class="btn btn-repeat">
+          <i class="fas fa-redo"></i>
+        </div>
+        <div class="btn btn-prev">
+          <i class="fas fa-step-backward"></i>
+        </div>
+        <div class="btn btn-toggle-play">
+          <i class="fas fa-pause icon-pause"></i>
+          <i class="fas fa-play icon-play"></i>
+        </div>
+        <div class="btn btn-next">
+          <i class="fas fa-step-forward"></i>
+        </div>
+        <div class="btn btn-random">
+          <i class="fas fa-random"></i>
+        </div>
+
+
+
+      </div>
+
+      <input id="progress" class="progress" type="range" value="0" step="1" min="0" max="100">
+
+      <audio id="audio" src=""></audio>
+    </div>
+
+    <!-- Playlist -->
+    <div class="playlist">
+
+
+
+    </div>
+  </div>
+
+  <script src="./assets/js/index.js"></script>
+</body>
+
+</html>
+
+<!-- 1: render bài hát              :✓ ,đã xuất ra được danh sách bài hát -->
+<!-- 2: Scroll top                  :✓ ,đã cuộn được trang web và thu nhỏ được đĩa-->
+<!-- 3:play/pause/seek              :✓ ,đã play/pause và tua được bài hát đang phát (bug nhẹ ở seek)-->
+<!-- 4: CD rotate                   :✓ ,đã xoay được đĩa khi bấm play và dừng khi pause-->
+<!-- 5:Next/Prev                    :✓ ,đã click được next chuyển bài và prev lùi bài -->
+<!-- 6:Random                       :✓ ,đã random được bài hát-->
+<!-- 7:Next/Repeat when ended       :✓ ,đã chuyển tiếp và lặp(Repeat) bài hát khi kết thúc-->
+<!-- 8:Active Song                  :✓ ,đã tạo class active thêm vào bài hát đang chạy  -->
+<!-- 9:Scroll active song into view :✓ ,đã cuộn xuống bài hát được active -->
+<!-- 10: Play song when click       :✓ ,đã play nhạc khi click vào bài hát khác -->
+<!-- 11: volume when click          :✓ ,đã xử lý tăng giảm âm lượng khi click vào volume  -->
